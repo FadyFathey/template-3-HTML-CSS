@@ -544,7 +544,7 @@ article {
 
 .gallery .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -595,7 +595,7 @@ article {
 /* Container styling */
 .features .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -757,7 +757,7 @@ article {
 
 .testimonials .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
 }
 
@@ -1069,8 +1069,16 @@ article {
 
 .skills .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 30px;
+    justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+    .skills .container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    }
 }
 
 .skills-graphs div {
@@ -1178,6 +1186,15 @@ article {
     margin-bottom: 30px;
 }
 
+@media (max-width: 767px) {
+    .how-it-works img {
+        width: 300px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
 .how-it-works .how-it-works-text .box .box-img {
     width: 100px;
     margin-right: 30px;
@@ -1192,8 +1209,17 @@ article {
     position: relative;
     border-radius: 6px;
     z-index: 1;
+}
 
-
+@media (max-width:767px) {
+    .how-it-works .how-it-works-text .box {
+        flex-direction: column;
+        text-align: center;
+        width: 300px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .how-it-works .how-it-works-text .box::after {
@@ -1247,14 +1273,26 @@ article {
 
 .latest-events .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 121px;
     align-items: center;
     justify-content: center;
 }
 
 .latest-events .container .event-img img {
     max-width: 450px;
+}
+
+@media (max-width:767px) {
+    .latest-events .container {
+        gap: 30px;
+    }
+    .latest-events .container .event-img img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px;
+    }
 }
 
 .latest-events .container .event-content .counter-holder {
